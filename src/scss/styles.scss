@@ -1,0 +1,384 @@
+@import "./variables";
+
+body{
+	font-family: 'Rubik', sans-serif;
+	font-size:16px;
+	background: $white;
+}
+
+header{
+	@include row-bt-fs;
+	padding: 2em 3em;
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+	.menu, .sub-menu{
+		@include row-bt;
+		li{
+			margin:0 1em;
+			a{
+				color:$white;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+	}
+	.sub-menu{
+		li{
+			a{
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.slide_container{
+	height: 100vh;
+	@include col-ct; 
+	.slide{
+		padding: 0 3em;
+		width: 100%;
+		height: 100vh;
+		@include row-ct;
+		.slide_content{
+			width: 100%;
+			height: inherit;
+			@include row-st;
+			.side-info{
+				@include col-end;
+			    width: fit-content;
+			    height: inherit;
+			    margin-right: 8.625em;
+				.year{
+					@include row-ct;
+					p{
+						color:$white;
+						margin-right:10px;
+					}
+					hr{
+						width: 2.375em;
+						border-top: none;
+					}
+				}
+				.networks{
+					margin-top: 23em;
+					z-index:99;
+					li{
+						margin: 1.15em 0;
+					}
+				}
+			}
+			.main-info{
+				width: fit-content;
+				p{
+					color:$white;
+				}
+				hr{
+					width: 2.375em;
+					border-top: none;
+					margin: 10px 0 15px 0;
+				}
+				h1{
+					color:$white;
+					font-size: 4em;
+					line-height: 66px;
+					letter-spacing: -1px;
+				}
+				.see-more{
+					width: fit-content;
+					@include row-ct;
+					a{
+						color:$white;
+						margin-right: 1.5em;
+					}
+				}
+			}
+		}
+	}
+	.s1{
+		background-image: url(../images/slide1.jpg);
+		background-size:cover;
+	}
+	.s2{
+		background-image: url(../images/slide2.jpg);
+		background-size:cover;
+	}
+	.s3{
+		background-image: url(../images/slide3.jpg);
+		background-size:cover;
+	}
+}
+
+.slide_foot{
+	width: 100%;
+    position: absolute;
+    bottom: 0px;
+	@include row-bt;
+	.slide-nav{
+		background: $white;
+		.s-nav{
+			height: 130px;
+			width: 273px !important;
+			display: flex !important;
+			@include col-ct;
+			background: rgb(250,250,250);
+			&:focus{
+				outline: none;
+			}
+			.nav-num{
+				font-weight: 400;
+				line-height: 17px;
+				color: #626262;
+				text-align: left;
+			}
+			p{
+				line-height: 17px;
+				letter-spacing: -0.21875px;
+				color: #828282;
+			    font-weight: 500;
+			}
+		}
+		.slick-current{
+			div{
+				.s-nav{
+					background: $white;
+					.nav-num{
+						color:$yellow;
+					}
+					p{
+						color:black;
+					}
+				}
+			}
+		}
+	}
+	.arrow-down{
+		@include row-ct;
+		width: calc(100% - 819px);
+	}	
+}
+
+.wsy{
+	padding: 4.18em 3em;
+	.wsy-title{
+		@include col-st;
+		h2{
+			line-height: 40px;
+			font-weight: bold;
+		}
+		hr{
+			width: 3.75em;
+			border-top: none;
+		    border-left: none;
+		    border-right: none;
+			border-color:$yellow;
+		    border-bottom-width: 2px;
+		}
+	}
+	.wsy-boxes{
+		width: 100%;
+		margin: 50px 0;
+		@include row-bt;
+		.wsy-box{
+			width: 350px;
+			height: 370px;
+			padding: 20px;
+			@include col-end;
+			// box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.198809);
+			h2{
+				font-weight: 500;
+				color:$white;
+				line-height: 40px;
+				letter-spacing: -0.53125px;
+			}
+			p{
+				color: $white;
+				font-weight: normal;
+				line-height: 28px;
+				letter-spacing: -0.21875px;
+			}
+		}
+		.wsy-b-1{
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 40%, #000000 70.19%), url(../images/wsy1.png);
+			background-position-x: center;
+		}
+		.wsy-b-2{
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 40%, #000000 70.19%), url(../images/wsy2.png);
+			background-position-x: center;
+		}
+		.wsy-b-3{
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 40%, #000000 70.19%), url(../images/wsy3.png);
+			background-position-x: center;
+		}
+	}
+}
+
+.unstick{
+	padding: 0 3em;
+	@include row-ar();
+	width: 100%;
+	.us_side-info{
+		h5{
+			font-weight: normal;
+			line-height: 17px;
+			letter-spacing: -0.21875px;
+		}
+		h2{
+			line-height: 40px;
+			letter-spacing: -0.53125px;
+			font-weight: bold;
+			margin-bottom: 30px;
+		}
+		hr{
+			width: 3.75em;
+			border-top: none;
+		    border-left: none;
+		    border-right: none;
+			border-color:$yellow;
+		    border-bottom-width: 2px;
+		    margin: 10px 0;
+		}
+		p{
+			line-height: 28px;
+			letter-spacing: -0.21875px;
+		}
+	}
+}
+
+.family{
+	@include row-bt;
+	background: $yellow;
+	margin:90px 0 100px 0;
+	.fam1{
+		height: 393px;
+		width: 50%;
+		min-width: 30%;
+		background-image: url(../images/family.png);
+		background-size:cover;
+	}
+	.fam2{
+		height: 393px;
+		width: 239px;
+		background-image: url(../images/family2.png);
+		background-size:cover;
+	}
+	.family_side-info{
+		@include col-end2;
+		width: calc(50% - 239px);
+	    height: 393px;
+	    padding:1em;
+		h2{
+			line-height: 40px;
+			letter-spacing: -0.53125px;
+		    font-size: 34px;
+		    width: 100%;
+		}
+		p{
+			line-height: 28px;
+			letter-spacing: -0.21875px;
+			margin:24px 0 27px;
+		}
+	}
+}
+
+.smart{
+	@include col-ct;
+	h2{
+		line-height: 40px;
+		text-align: center;
+		letter-spacing: -0.53125px;
+	}
+	hr{
+		width: 3.75em;
+		border-top: none;
+	    border-left: none;
+	    border-right: none;
+		border-color:$yellow;
+	    border-bottom-width: 2px;
+	    margin: 20px 0 50px;
+	}
+	.smart_content{
+		width: 100%;
+		@include row-ar;
+		.smart_boxes{
+			.s_box{
+				margin-bottom: 50px;
+				p{
+					line-height: 28px;
+					letter-spacing: -0.21875px;
+					margin:20px 0 30px;
+				}
+			}
+		}
+		.smart_videos{
+			@include col-ct;
+			img{
+				margin-bottom:100px; 
+			}
+		}
+	}
+}
+
+.process{
+	width: 100%;
+	@include col-ct;
+	hr{
+		width: 3.75em;
+		border-top: none;
+	    border-left: none;
+	    border-right: none;
+		border-color:$yellow;
+	    border-bottom-width: 2px;
+	    margin: 20px 0 50px;
+	}
+	.pro_step{
+		@include row-st2;
+		margin-bottom:80px;
+		.step-text{
+			width: 50%;
+			@include row-st2;
+			span{
+				@include row-ct;
+				background: #000;
+			    color: white;
+			    font-weight: bold;
+			    font-size: 34px;
+			    line-height: 40px;
+			    width: 85px;
+			    height: 85px;
+			    border-radius: 100%;
+			}
+			.step-info{
+				margin: 30px 30px 0; 
+				h3{
+					font-weight: 500;
+					line-height: 28px;
+					letter-spacing: -0.375px;
+					margin-bottom: 30px;
+				}
+				p{
+					line-height: 28px;
+					letter-spacing: -0.21875px;
+				}
+			}
+		}
+		img{
+			width: 50%;
+		}
+	}
+}
+
+.gallery{
+	width: 100%;
+	@include col-ct;
+	hr{
+		width: 3.75em;
+		border-top: none;
+	    border-left: none;
+	    border-right: none;
+		border-color:$yellow;
+	    border-bottom-width: 2px;
+	    margin: 20px 0 50px;
+	}
+}
